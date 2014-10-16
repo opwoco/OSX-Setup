@@ -83,14 +83,14 @@ cecho "Are you developer?" $cyan
 select yn in "Yes" "No"; do
   case $yn in
     Yes ) 
-    	apps+=('sourcetree')
+    	apps=("${apps[@]}" "sourcetree")
     	
     	echo ""
 	    cecho "Do you do Web?" $cyan
 	    select yn in "Yes" "No"; do
             case $yn in
     	        Yes )
-    	        apps+=('phpstorm')
+    	        apps=("${apps[@]}" "phpstorm")
                 break;;
                 No ) break;;
             esac
