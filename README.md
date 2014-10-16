@@ -10,5 +10,5 @@ Install
 
 Just execute the following in the Terminal App:
 ```shell
-sh <(curl -fsSL https://raw.githubusercontent.com/SomeKindOfCode/OSX-Setup/master/setup.sh)
+sh <(curl -fsSL https://raw.githubusercontent.com/opwoco/OSX-Setup/master/setup.sh)
 ```
