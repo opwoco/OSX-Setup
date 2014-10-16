@@ -69,34 +69,37 @@ echo ""
 cecho "Now it's time for some Apps..." $yellow
 
 apps=(
-	# Utilities
 	google-chrome
-	bittorrent-sync
 	caffeine
-	launchbar
-	 #carbon-copy-cloner
 	macdown
 	iterm2
-	transmit
-	bartender
-	 #dropbox
-	skype
-	soundflower
-	# Dev Stuff
-	sourcetree
-	#coda
-	#Gaming
-	openemu
-	steam
-	obs # Open Broadcaster
-	# Graphic and Media
-	adobe-photoshop-lightroom
+	hipchat
 	imagealpha
 	imageoptim
-	plex-media-server
-	handbrake
-	subler
 )
+
+echo ""
+cecho "Are you developer?" $cyan
+select yn in "Yes" "No"; do
+  case $yn in
+    Yes ) 
+    	apps+=sourcetree
+    	
+    	echo ""
+	    cecho "Do you do Web?" $cyan
+	    select yn in "Yes" "No"; do
+            case $yn in
+    	        Yes )
+    	        apps+=phpstorm
+                break;;
+                No ) break;;
+            esac
+        done
+
+        break;;
+    No ) break;;
+  esac
+done
 
 echo ""
 cecho "Do you want to install the following apps?" $cyan
