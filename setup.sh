@@ -79,6 +79,17 @@ apps=(
 )
 
 echo ""
+cecho "Need Spotify?" $cyan
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes )
+    	    apps=("${apps[@]}" "spotify")
+            break;;
+        No ) break;;
+    esac
+done
+
+echo ""
 cecho "Are you developer?" $cyan
 select yn in "Yes" "No"; do
   case $yn in
@@ -86,11 +97,12 @@ select yn in "Yes" "No"; do
     	apps=("${apps[@]}" "sourcetree")
     	
     	echo ""
-	    cecho "Do you do Web?" $cyan
-	    select yn in "Yes" "No"; do
+	cecho "Do you do Web?" $cyan
+	select yn in "Yes" "No"; do
             case $yn in
     	        Yes )
-    	        apps=("${apps[@]}" "phpstorm")
+    	        apps=("${apps[@]}" "phpstorm" "mamp")
+    	        
                 break;;
                 No ) break;;
             esac
