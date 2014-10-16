@@ -4,8 +4,9 @@
 # https://gist.github.com/brandonb927/3195465
 # which was flavored by 
 # https://github.com/mathiasbynens/dotfiles/blob/master/.osx
-# with some sprinkles added by me
+# with some sprinkles added by
 # - @CBeloch
+# - @opwoco
 
 # Set the colours you can use
 black='\033[0;30m'
@@ -269,7 +270,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 echo ""
 cecho "Do you want to disable the sleep image?" $cyan
-cecho "This will save disk space, but you wont be able to continue work if your battery dies and have to to a full reboot" $magenta
+cecho "This will save disk space, but you wont be able to continue work if your battery dies and have to do a full reboot" $magenta
 select yn in "Yes" "No"; do
   case $yn in
     Yes ) 
