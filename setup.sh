@@ -96,12 +96,22 @@ select yn in "Yes" "No"; do
     Yes ) 
     	apps=("${apps[@]}" "sourcetree")
     	
-    	echo ""
-	cecho "Do you do Web?" $cyan
+	cecho "> Do you do Web?" $cyan
 	select yn in "Yes" "No"; do
             case $yn in
     	        Yes )
-    	        apps=("${apps[@]}" "phpstorm" "mamp")
+    	        apps=("${apps[@]}" "phpstorm" "mamp" "sequel-pro" "transmit" "shuttle")
+    	        
+                break;;
+                No ) break;;
+            esac
+        done
+        
+        cecho "> Do you do Android?" $cyan
+	select yn in "Yes" "No"; do
+            case $yn in
+    	        Yes )
+    	        apps=("${apps[@]}" "genymotion" "virtualbox" "android-studio" "android-file-transfer")
     	        
                 break;;
                 No ) break;;
