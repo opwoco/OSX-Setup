@@ -71,7 +71,7 @@ cecho "Now it's time for some Apps..." $yellow
 
 apps=(
 	google-chrome
-	caffeine
+	keepingyouawake
 	macdown
 	iterm2
 	hipchat
